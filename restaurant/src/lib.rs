@@ -16,6 +16,8 @@ mod front_of_house {
 
 fn serve_order() {}
 
+use crate::front_of_house::hosting;
+
 mod back_of_house {
     pub struct Breakfast {
         pub toast: String,
@@ -38,11 +40,7 @@ mod back_of_house {
 }
 
 pub fn eat_at_restaurant() {
-    // Absolute path
-    crate::front_of_house::hosting::add_to_waitlist();
-
-    // Relative path
-    front_of_house::hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
