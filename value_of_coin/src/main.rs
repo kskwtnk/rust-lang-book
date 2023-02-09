@@ -27,5 +27,9 @@ fn value_in_cents(coin: Coin) -> u32 {
 }
 
 fn main() {
+    value_in_cents(Coin::Penny);
+    value_in_cents(Coin::Nickel);
+    value_in_cents(Coin::Dime);
+    value_in_cents(Coin::Quarter(UsState::Alabama));
     value_in_cents(Coin::Quarter(UsState::Alaska));
 }
