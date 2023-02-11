@@ -1,10 +1,11 @@
 fn main() {
-    let mut v = Vec::new();
+    let v = vec![1, 2, 3, 4, 5];
 
-    v.push(5);
-    v.push(6);
-    v.push(7);
-    v.push(8);
-    
-    println!("{:?}", v);
+    let third: &i32 = &v[2];
+    println!("The third element is {} (indexing syntax)", third);
+
+    match v.get(2) {
+        Some(third) => println!("The third element is {} (get method)", third),
+        None => println!("There is no third element."),
+    }
 }
